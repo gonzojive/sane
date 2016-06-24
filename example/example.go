@@ -7,7 +7,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/tjgq/sane"
+	"github.com/gonzojive/sane"
 	"golang.org/x/image/tiff"
 	"image"
 	"image/jpeg"

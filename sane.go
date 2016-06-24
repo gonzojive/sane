@@ -27,6 +27,26 @@ const wordSize = unsafe.Sizeof(C.SANE_Word(0))
 // Type represents the data type of an option.
 type Type int
 
+// String returns a human-readable representation of a type.
+func (t Type) String() string {
+	switch t {
+	case TypeBool:
+		return "bool"
+	case TypeInt:
+		return "int"
+	case TypeFloat:
+		return "float"
+	case TypeString:
+		return "string"
+	case TypeButton:
+		return "button"
+	case typeGroup:
+		return "group"
+	default:
+		return "UNKNOWN"
+	}
+}
+
 // Type constants.
 const (
 	TypeBool   Type = C.SANE_TYPE_BOOL
